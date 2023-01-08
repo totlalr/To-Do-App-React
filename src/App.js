@@ -1,4 +1,4 @@
-import ToDo from "./ToDo";
+import ToDo from "./components";
 function App() {
   return (
     <div className="App">
