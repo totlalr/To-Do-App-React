@@ -1,13 +1,11 @@
 import React from "react";
+
+//Hooks
 import { useEffect, useState } from "react";
 
-/*
-const data ={
-    all : 1,
-    done : 2 ,
-    InProgress : 3,
-}
-*/
+const tableStyle = {
+  fontSize: "0.8rem",
+};
 
 const ConditionTaskTable = (props) => {
   //States
@@ -27,16 +25,17 @@ const ConditionTaskTable = (props) => {
   return (
     <table className="table mb-4">
       <thead>
-        <tr>
+        <tr className="text-center">
           <th scope="col">No.</th>
           <th scope="col">Todo item</th>
-          <th scope="col">Status</th>
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
         </tr>
       </thead>
       <tbody>
         {dataTable.map((item) => {
           return (
-            <tr key={item.id}>
+            <tr key={item.id} className="text-center" style={tableStyle}>
               <th scope="row">{item.id}</th>
               <td
                 className={
@@ -47,7 +46,8 @@ const ConditionTaskTable = (props) => {
               >
                 {item.TodoItem}
               </td>
-              <td>{item.id}</td>
+              <td>{item.description}</td>
+              <td>{item.time}</td>
             </tr>
           );
         })}

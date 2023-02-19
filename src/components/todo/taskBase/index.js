@@ -1,10 +1,14 @@
 import * as React from "react";
+
+//Material Ui
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import ConditionTaskTable from "./components/conditionTask/index";
+
+//Hooks
 import { useState } from "react";
 
 const TaskBase = (props) => {
